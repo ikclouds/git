@@ -5,6 +5,7 @@
   - [Git initial configuration](#git-initial-configuration)
   - [Get help](#get-help)
   - [Clone repository](#clone-repository)
+  - [Commit, pull, push](#commit-pull-push)
   - [Information sources](#information-sources)
 
 ## Install git
@@ -41,8 +42,7 @@ git config --global user.name "ikclouds"
 git config --global user.email "<ikclouds91@gmail.com>"
 git config --list --show-origin
 
-# git config --global vim
-
+# git config --global core.editor vim
 # git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
 ```
 
@@ -57,11 +57,45 @@ git config -h
 ## Clone repository
 
 ```bash
-git clone <git@github.com>:ikclouds/git.git
-git clone <https://github.com/ikclouds/git.git>
+git clone git@github.com>:ikclouds/git.git
+git clone git@github.com:ikclouds/repo.git
+git clone https://github.com/ikclouds/git.git
 
 cd git
 git status
+```
+
+## Commit, pull, push
+
+```bash
+# Change project folder
+cd git
+
+# Get git working area status
+git status -h
+git status -s
+git status
+
+# List branches (main)
+git branch
+git branch -l  # --list
+git branch -a  # --all
+
+# Add all files to the index/stage area
+git add .
+git add index.html
+git add -A
+git add -u
+# 
+git commit -m "add commit doc" 
+# or 
+# git commit -a -m "add commit doc"
+
+# Incorporates changes from a remote repository into the current branch
+git pull
+
+# Updates remote refs using local refs, while sending objects to the remote repository
+git push
 ```
 
 ## Information sources
